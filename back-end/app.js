@@ -15,7 +15,7 @@ const snackController = require("./controllers/snackController");
 
 // ROUTES
 app.get("/", (req, res) => {
-    res.send("Welcome To Snack-o-Log");
+    res.send("Get Snack'n at Snack-a-log!");
   });
 
 app.use("/snacks", snackController);
