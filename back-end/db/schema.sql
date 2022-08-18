@@ -9,7 +9,7 @@ CREATE TABLE snacks (
     fiber INTEGER DEFAULT 0,
     protein INTEGER DEFAULT 0,
     added_sugar INTEGER DEFAULT 0,
-    is_healthy BOOLEAN DEFAULT false, 
+    is_healthy BOOLEAN, 
     image varchar(255) DEFAULT 'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image'
 );
 
