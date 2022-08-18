@@ -18,16 +18,22 @@ export default function New_Snack() {
     setSnack({ ...snack, [event.target.id]: event.target.value });
   };
 
+  const addSnack = (newSnack) => {
+    axios
+      .post(`${API}/snacks`, newSnack)
+      .then(
+        () => {
+          navigate(`/snacks`);
+        },
+        (error) => console.error(error)
+      )
+      .catch((c) => console.warn("catch", c));
+  };
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .post(`${API}/snacks/new`, snack)
-      .then((res) => {
-        navigate("/snacks");
-      })
-      .catch((err) => {
-        console.warn(err);
-      });
+    addSnack(snack);
   };
 
   return (

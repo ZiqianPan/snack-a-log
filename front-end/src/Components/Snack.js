@@ -7,7 +7,7 @@ function Snack({ snack }) {
   return (
     <tr>
       <td>
-        <a href={snack.url} target="_blank" rel="noreferrer">
+        <a href={`/snacks/${snack.id}`} rel="noreferrer">
           {snack.name}
         </a>
       </td>
