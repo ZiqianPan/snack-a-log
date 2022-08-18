@@ -34,12 +34,18 @@ nav {
   }
   
   table {
-    width: 50%;
+    width: 80%;
+    /* text-align: center; */
     margin: auto;
+  }
+ 
+  th {
+    text-align: center;
   }
   
   td {
     text-align: center;
+    
   }
   
   tbody td:not(td:first-of-type):hover {

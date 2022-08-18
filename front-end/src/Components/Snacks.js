@@ -5,11 +5,12 @@ import Snack from "./Snack.js";
 const API = process.env.REACT_APP_API_URL;
 
 function Snacks() {
-  const [Snacks, setSnacks] = useState([])
+  const [snacks, setSnacks] = useState([])
   useEffect(() => {
     axios
       .get(`${API}/snacks`)
-      .then((response) => setSnacks(response.data))
+      .then((response) => setSnacks(response.data.payload))
+      .then(console.log(snacks))
       .catch((c) => console.warn("catch", c));
   }, []);
   return (
@@ -18,18 +19,18 @@ function Snacks() {
         <table>
           <thead>
             <tr>
-              <th></th>
-              <th>Take me there</th>
-              <th>See this snack</th>
+              <th>Name</th>
+              <th>Fiber</th>
+              <th>Protein</th>
+              <th>Added Sugar</th>
+              <th>Is Healthy?</th>
+              <th>Details</th>
             </tr>
           </thead>
           <tbody>
-
-            {/* {console.log(Snacks.payload.map)} */}
-    {/* {Snacks.payload.map((snack) =>  {
-              console.log(snack)
+              {snacks.map((snack) =>  {
               return <Snack key={snack.id} snack={snack} />;
-            })} */}
+            })}
           </tbody>
         </table>
       </section>
