@@ -1,24 +1,29 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import HeartHealth from "./HeartHealth";
 const API = process.env.REACT_APP_API_URL;
 
 function Snack({ snack }) {
   return (
-    <tr>
-      <td>
+    <div className="SnackCard">
+      <div className="singleCard Snack">
+        <h4>
+          {" "}
+          <img src={snack.image} alt="healthy food" width="200px" />
+        </h4>
+
+        <br />
+
+        <h4>
+          <HeartHealth snackHealth={snack.is_healthy} />
+        </h4>
+
         <a href={`/snacks/${snack.id}`} rel="noreferrer">
-          {snack.name}
+          <h4>{snack.name}</h4>
         </a>
-      </td>
-      <td>{snack.fiber}</td>
-      <td>{snack.protein}</td>
-      <td>{snack.added_sugar}</td>
-      <td>{snack.is_healthy ? <span>⭐️</span> : "Nope"}</td>
-      <td>
-        <Link to={`/snacks/${snack.id}`}>✏️</Link>
-      </td>
-    </tr>
+      </div>
+    </div>
   );
 }
 

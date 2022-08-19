@@ -7,7 +7,7 @@ export default function NavBar() {
         <Link to="/snacks">Snacks</Link>
       </h1>
       <button>
-        <Link to="/snacks/new">New Snack</Link>
+        <Link to="/snacks/new">New Snacks</Link>
       </button>
     </nav>
   );
