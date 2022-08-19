@@ -1,15 +1,14 @@
 import heartSolid from "../assets/heart-solid.png";
-import heartOutline from "../assets/heart-regular.png";
+import heart from "../assets/heart-regular.png";
 
 function HeartHealth({ snackHealth }) {
   return (
-    <p>
-      {" "}
+    <h4>
       <img
-        src={snackHealth ? heartSolid : heartOutline}
+        src={snackHealth ? heartSolid : heart}
         alt={snackHealth ? "healthy food" : "unhealthy food"}
       />
-    </p>
+    </h4>
   );
 }
 

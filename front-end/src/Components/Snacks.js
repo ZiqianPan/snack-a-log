@@ -16,12 +16,13 @@ function Snacks() {
   return (
     <div className="Snacks">
 
-      <section>
-        <h1>Snacks</h1>
-        {snacks.map((snack) => {
-          return <Snack key={snack.id} snack={snack} />;
-        })}
-      </section>
+        <article>
+          <h1>Snacks</h1>
+          {snacks.map((snack) => {
+            return <Snack key={snack.id} snack={snack} />;
+          })}
+        </article>
+    
     </div>
   );
 }
