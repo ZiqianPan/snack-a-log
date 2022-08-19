@@ -11,7 +11,7 @@ function Snack({ snack }) {
 
       <a href={`/snacks/${snack.id}`} rel="noreferrer">
         <span>
-          <HeartHealth snackHealth={snack.is_healthy} />
+          <HeartHealth snackHealth={snack.is_healthy}  />
         </span>
         <h4>{snack.name}</h4>
       </a>

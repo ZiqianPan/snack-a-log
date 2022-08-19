@@ -3,8 +3,8 @@ import heart from "../assets/heart-regular.png";
 
 function HeartHealth({ snackHealth }) {
   return (
-    <h4>
-      <img
+    <h4 >
+      <img className="heart"
         src={snackHealth ? heartSolid : heart}
         alt={snackHealth ? "healthy food" : "unhealthy food"}
       />

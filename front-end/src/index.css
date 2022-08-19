@@ -1,51 +1,49 @@
-
-
 body {
   font-family: "Overlock", cursive;
 }
 
-h1{
-    font-family: 'Carter One', cursive;
+h1 {
+  font-family: "Carter One", cursive;
 }
 
 main {
-    width: 90%;
-    margin: auto
+  width: 90%;
+  margin: auto;
 }
 
 nav {
   background-color: rgb(37, 36, 34);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 45px;
   margin-bottom: 15px;
-  align-items: center;
 }
 
 a {
   text-decoration: none;
-  color: rgb(235, 94,40);
+  color: rgb(235, 94, 40);
 }
 
-h4{
+h4 {
   margin: 0;
   font-size: 15px;
   text-align: center;
 }
 
-article {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1em;
-}
-
-.Snacks div{
+.Snacks div {
   width: 150px;
-  padding: 1em;
+  padding: 15px;
   background-color: rgb(255, 252, 242);
 }
 
-.Snacks img{
+.Snacks article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.Snacks img {
   width: 150px;
-} 
+}
