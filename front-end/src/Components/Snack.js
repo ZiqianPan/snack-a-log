@@ -6,23 +6,15 @@ const API = process.env.REACT_APP_API_URL;
 
 function Snack({ snack }) {
   return (
-    <div className="SnackCard">
-      <div className="singleCard Snack">
-        <h4>
-          {" "}
-          <img src={snack.image} alt="healthy food" width="200px" />
-        </h4>
+    <div className="singleCard Snack">
+      <img src={snack.image} alt={snack.name} width="200px" />
 
-        <br />
-
-        <h4>
-          <HeartHealth snackHealth={snack.is_healthy} />
-        </h4>
-
-        <a href={`/snacks/${snack.id}`} rel="noreferrer">
-          <h4>{snack.name}</h4>
-        </a>
-      </div>
+      <a href={`/snacks/${snack.id}`} rel="noreferrer">
+        <span>
+          <HeartHealth snackHealth={snack.is_healthy}  />
+        </span>
+        <h4>{snack.name}</h4>
+      </a>
     </div>
   );
 }

@@ -9,8 +9,9 @@ const {
   updateSnack,
 } = require("../queries/snacks.js");
 
-const { checkName, checkImage, confirmHealth } = require("../validations/checkSnacks")
+const { checkName, checkImage } = require("../validations/checkSnacks");
 
+const confirmHealth = require("../confirmHealth");
 
 snacks.get("/", async (req, res) => {
   const allSnacks = await getAllSnacks();
@@ -33,27 +34,21 @@ snacks.get("/:id", async (req, res) => {
 
 //creating snacks.
 snacks.post("/", checkName, checkImage, async (req, res) => {
-req.body.is_healthy = confirmHealth(req);
+  const { body } = req;
 
-try {
-    const snack = await createSnack(req.body);// making the snack
-    
+  body.is_healthy = confirmHealth(body);
+
+  try {
+    const snack = await createSnack(body); // making the snack
     if (snack.id) {
-        console.log((req.body.is_healthy));
-        res.json({ success: true, payload: snack });
+      res.json({ success: true, payload: snack });
     } else {
-        res.status(404).json({ success: false, payload: "not found" });
+      res.status(404).json({ success: false, payload: "not found" });
     }
-} catch (err) {
+  } catch (err) {
     console.log(err);
-}
-
-  
-    
-   
-
-}
-);
+  }
+});
 
 //delete function
 snacks.delete("/:id", async (req, res) => {
