@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import HeartHealth from "./HeartHealth";
+
+
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -33,23 +36,36 @@ export default function SnackDetails() {
 
   return (
     <div className="show">
-      <img src={snack.image} alt="snack-img" />
-      <p>
-        {" "}
-        <strong>Name:</strong> {snack.name}
-      </p>
-      <p>
-        {" "}
-        <strong>Fiber:</strong> {snack.fiber}{" "}
-      </p>
-      <p>
-        {" "}
-        <strong>Protein:</strong> {snack.protein}{" "}
-      </p>
-      <p>
-        {" "}
-        <strong>Added Sugar</strong> {snack.added_sugar}{" "}
-      </p>
+      <aside>
+      <HeartHealth snackHealth={snack.is_healthy}/>
+      </aside>
+
+      <article>
+        <div>
+          <img src={snack.image} alt={snack.name} />
+        </div>
+      </article>
+
+      <article>
+        <div>
+          <p>
+            {" "}
+            <strong>Name:</strong> {snack.name}
+          </p>
+          <p>
+            {" "}
+            <strong>Fiber:</strong> {snack.fiber}{" "}
+          </p>
+          <p>
+            {" "}
+            <strong>Protein:</strong> {snack.protein}{" "}
+          </p>
+          <p>
+            {" "}
+            <strong>Added Sugar:</strong> {snack.added_sugar}{" "}
+          </p>
+        </div>
+      </article>
 
       <div className="showNavigation">
         <div>

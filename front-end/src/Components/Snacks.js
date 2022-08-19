@@ -5,7 +5,7 @@ import Snack from "./Snack.js";
 const API = process.env.REACT_APP_API_URL;
 
 function Snacks() {
-  const [snacks, setSnacks] = useState([])
+  const [snacks, setSnacks] = useState([]);
   useEffect(() => {
     axios
       .get(`${API}/snacks`)
@@ -15,24 +15,12 @@ function Snacks() {
   }, []);
   return (
     <div className="Snacks">
+
       <section>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Fiber</th>
-              <th>Protein</th>
-              <th>Added Sugar</th>
-              <th>Is Healthy?</th>
-              <th>Details</th>
-            </tr>
-          </thead>
-          <tbody>
-              {snacks.map((snack) =>  {
-              return <Snack key={snack.id} snack={snack} />;
-            })}
-          </tbody>
-        </table>
+        <h1>Snacks</h1>
+        {snacks.map((snack) => {
+          return <Snack key={snack.id} snack={snack} />;
+        })}
       </section>
     </div>
   );

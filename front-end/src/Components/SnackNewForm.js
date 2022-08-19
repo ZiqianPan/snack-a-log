@@ -39,6 +39,7 @@ export default function New_Snack() {
   return (
     <div className="new">
       <div>
+        {/* <h1>New Snacks</h1> */}
         <p>Snack Health is determined by</p>
         <ul>
           <li>Protein is above 5</li>
