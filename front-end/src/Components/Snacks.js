@@ -16,8 +16,8 @@ function Snacks() {
   return (
     <div className="Snacks">
 
-        <article>
-          <h1>Snacks</h1>
+        <article className="Snacks">
+          <h1 id="SnacksText">Snacks</h1>
           {snacks.map((snack) => {
             return <Snack key={snack.id} snack={snack} />;
           })}

@@ -12,10 +12,13 @@ import Show from "./Pages/Show";
 // COMPONENTS
 import NavBar from "./Components/NavBar";
 
+import { UserProvider } from "./UserProvider";
+
 function App() {
   return (
     <div className="App">
-      <Router>
+       <UserProvider>
+       <Router>
         <NavBar />
         <main>
           <Routes>
@@ -28,6 +31,7 @@ function App() {
           </Routes>
         </main>
       </Router>
+       </UserProvider>
     </div>
   );
 }

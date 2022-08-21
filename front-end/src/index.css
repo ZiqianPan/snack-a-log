@@ -8,7 +8,7 @@ h1 {
 
 main {
   width: 90%;
-  margin: auto;
+  margin: 0;
 }
 
 nav {
@@ -44,6 +44,57 @@ h4 {
   padding: 15px;
 }
 
-.Snacks img {
-  width: 150px;
+
+.new {
+display: grid;
+grid-template-columns: repeat(6,1fr);
+}
+
+.edit {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+}
+
+
+.HealthSnackText {
+  text-align: left;
+  display: grid;
+  grid-column: 1/3;
+  padding: 15px;
+  margin:10px;
+}
+
+form {
+  display: grid;
+  grid-column: 3/7;
+}
+
+
+.Snack {
+margin:20px;
+/* padding: 30px; */
+ 
+}
+
+#SnacksText {
+width: 100%;
+text-align: center;
+
+}
+
+
+.Heart {
+  text-align: left;
+}
+
+.show {
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+  /* grid-template-columns: repeat(5,1fr); */
+  /* flex-wrap: wrap; */
+}
+
+.ShowText{
+  text-align: center;
 }

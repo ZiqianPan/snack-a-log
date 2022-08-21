@@ -49,7 +49,7 @@ export default function Edit_Snack() {
 
   return (
     <div className='edit'>
-     <div>
+     <div className='HealthSnackText'>
         <p>Snack Health is determined by</p>
         <ul>
           <li>Protein is above 5</li>
