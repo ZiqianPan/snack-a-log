@@ -46,7 +46,7 @@ export default function SnackDetails() {
         </div>
       </article>
 
-      <article>
+      <article className="ShowText">
         <div>
           <p>
             {" "}

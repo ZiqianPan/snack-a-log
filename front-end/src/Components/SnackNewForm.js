@@ -38,7 +38,7 @@ export default function New_Snack() {
 
   return (
     <div className="new">
-      <div>
+      <div className="HealthSnackText">
         <p>Snack Health is determined by</p>
         <ul>
           <li>Protein is above 5</li>
