@@ -40,7 +40,7 @@ h4 {
 .Snacks article {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 15px;
 }
 
@@ -91,8 +91,8 @@ text-align: center;
   display: flex;
   flex-flow:row wrap;
   justify-content: space-around;
-  /* grid-template-columns: repeat(5,1fr); */
-  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(5,1fr);
+  flex-wrap: wrap;
 }
 
 .ShowText{
