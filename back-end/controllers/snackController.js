@@ -64,7 +64,9 @@ snacks.delete("/:id", async (req, res) => {
 //update current snack
 snacks.put("/:id", async (req, res) => {
   const { id } = req.params;
-
+  const { body } = req;
+  
+  body.is_healthy = confirmHealth(body);
   const updatedSnack = await updateSnack(req.body, id);
 
   if (updatedSnack.id) {

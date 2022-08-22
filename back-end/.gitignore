@@ -52,6 +52,8 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+.prod_schema.sql
+.prod_seed.sql
 
 # Microbundle cache
 .rpt2_cache/
