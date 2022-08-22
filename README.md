@@ -1,3 +1,7 @@
+Link to my deployed Snack-O-Log APP: https://63029ac6139e415c20e5224d--hilarious-raindrop-145204.netlify.app/
+
+
+=========================
 # Full Stack Application Pair Project
 
 ## Snack-a-log
