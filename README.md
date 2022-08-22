@@ -1,4 +1,4 @@
-Link to my deployed Snack-O-Log APP: https://63029ac6139e415c20e5224d--hilarious-raindrop-145204.netlify.app/
+Link to my deployed Snack-O-Log APP: https://63041710726f7f25fb95cfdc--hilarious-raindrop-145204.netlify.app
 
 
 =========================
